@@ -10,6 +10,12 @@
     "format": "biome format --write"
   },
   "dependencies": {
+    "@google/genai": "^1.44.0",
+    "@supabase/supabase-js": "^2.98.0",
+    "date-fns": "^4.1.0",
+    "googleapis": "^171.4.0",
+    "groq-sdk": "^0.37.0",
+    "lucide-react": "^0.577.0",
     "next": "16.1.6",
     "react": "19.2.3",
     "react-dom": "19.2.3"
