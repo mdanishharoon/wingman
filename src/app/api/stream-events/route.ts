@@ -136,7 +136,7 @@ export async function GET(req: NextRequest) {
             console.error("Streaming error:", err);
             await sendEvent('error', { message: err.message || 'Error processing events' });
         } finally {
-            writer.close();
+            try { writer.close(); } catch { }
         }
     };
 
