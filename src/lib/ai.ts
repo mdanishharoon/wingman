@@ -168,11 +168,12 @@ A user (${customerEmail}) just cancelled their ${planAmountDollars ? `$${planAmo
 
 Write a short, warm, personal email that:
 1. Introduces Danish by name and role
-2. Acknowledges their SPECIFIC feedback (do NOT be generic — reference exactly what they said)
+2. Acknowledges their SPECIFIC feedback (do NOT be generic -- reference exactly what they said)
 3. Explains that the team takes this seriously and is working to improve
-4. Invites them to a 15-20 minute call: https://calendly.com/danish-haroon-imagine/new-meeting
-5. Ends warmly, expressing hope they'll reconsider Imagine.Art in the future
-6. MUST end with this EXACT signature format on separate lines:
+4. If the user's complaint relates to lack of features, quality of outputs, limited credits, wanting to explore more, or anything that could be alleviated by having more credits to experiment with, mention that we would love to offer them ${planAmountDollars && planAmountDollars >= 100 ? '10,000' : '5,000'} free credits if they are willing to give Imagine.Art a second chance. Frame this naturally as "we would love to offer you X credits on us so you can re-explore the platform" -- do NOT make it feel transactional or desperate. If their complaint is purely about price, billing, or switching to a competitor for non-feature reasons, do NOT mention the credit offer.
+5. Invites them to a 15-20 minute call: https://calendly.com/danish-haroon-imagine/new-meeting
+6. Ends warmly, expressing hope they'll reconsider Imagine.Art in the future
+7. MUST end with this EXACT signature format on separate lines:
 "Best regards,
 Danish Haroon
 Associate Product Manager

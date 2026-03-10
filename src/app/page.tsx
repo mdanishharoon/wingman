@@ -451,16 +451,20 @@ export default function Dashboard() {
                     />
                   </FieldBlock>
                   <FieldBlock label="Subject">
-                    <div className="bg-white/[0.03] rounded-xl px-4 py-3 border border-white/[0.06]">
-                      <p className="text-[13px] text-zinc-200 font-medium">{emailDraft.subject}</p>
-                    </div>
+                    <input
+                      type="text"
+                      value={emailDraft.subject}
+                      onChange={(e) => setEmailDraft({ ...emailDraft, subject: e.target.value })}
+                      className="w-full bg-white/[0.03] rounded-xl px-4 py-3 border border-white/[0.06] text-[13px] text-zinc-200 font-medium focus:outline-none focus:border-violet-500/30 transition-colors"
+                    />
                   </FieldBlock>
                   <FieldBlock label="Body">
-                    <div className="bg-white/[0.03] rounded-xl px-4 py-4 border border-white/[0.06]">
-                      <div className="text-[13px] text-zinc-300 leading-relaxed whitespace-pre-wrap">
-                        {emailDraft.body}
-                      </div>
-                    </div>
+                    <textarea
+                      value={emailDraft.body}
+                      onChange={(e) => setEmailDraft({ ...emailDraft, body: e.target.value })}
+                      rows={12}
+                      className="w-full bg-white/[0.03] rounded-xl px-4 py-4 border border-white/[0.06] text-[13px] text-zinc-300 leading-relaxed focus:outline-none focus:border-violet-500/30 transition-colors resize-y"
+                    />
                   </FieldBlock>
                 </div>
               ) : (
@@ -617,10 +621,10 @@ function EventCard({ event, type, index, getFormatDistance, getFormattedDate, on
           {/* AI Decision */}
           {type !== 'discount' && (
             <div className={`rounded-xl px-4 py-3 border ${type === 'pending'
-                ? 'bg-emerald-500/[0.04] border-emerald-500/[0.08]'
-                : type === 'contacted'
-                  ? 'bg-violet-500/[0.04] border-violet-500/[0.08]'
-                  : 'bg-white/[0.02] border-white/[0.04]'
+              ? 'bg-emerald-500/[0.04] border-emerald-500/[0.08]'
+              : type === 'contacted'
+                ? 'bg-violet-500/[0.04] border-violet-500/[0.08]'
+                : 'bg-white/[0.02] border-white/[0.04]'
               }`}>
               <div className={`flex items-center gap-1.5 text-[10px] font-semibold uppercase tracking-wider mb-1.5 ${type === 'pending' ? 'text-emerald-400' : type === 'contacted' ? 'text-violet-400' : 'text-zinc-500'
                 }`}>
